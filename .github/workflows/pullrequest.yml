@@ -4,7 +4,7 @@ jobs:
   PullRequest: 
     runs-on: ubuntu-latest
     steps: 
-      - name: Checar repositorio
+      - name: Check out repositorio
         uses: actions/checkout@v3
       - name: fazer um novo arquivo env
         uses: SpicyPizza/create-envfile@v1
