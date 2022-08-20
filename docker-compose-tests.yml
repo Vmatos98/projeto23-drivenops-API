@@ -5,10 +5,8 @@ services:
     restart: always
     ports:
       - "5532:5432"
-    volumes:
-      - pg_githubb-ci:/var/lib/postgresql/data
     env_file:
-      - .env
+      - .env.test
       
   node_app_github-ci:
     container_name: node_app_github-ci
@@ -18,7 +16,4 @@ services:
     depends_on:
       - db_postgres_github-ci
     env_file:
-      - .env
-
-volumes:
-  pg_githubb-ci:
+      - .env.test
